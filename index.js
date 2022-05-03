@@ -1,0 +1,10 @@
+var player1 = (Math.floor(Math.random()*6)) + 1;
+var player2 = (Math.floor(Math.random()*6)) + 1;
+var dice1src = "images/dice" + player1 + ".png";
+var dice2src = "images/dice" + player2 + ".png";
+var heading = document.querySelector("h1");
+if(player1 === player2) heading.textContent = "Draw";
+else if(player1 > player2) heading.textContent = "🚩Player 1 Wins";
+else heading.textContent = "Player 2 Wins🚩";
+document.querySelector(".img1").setAttribute("src",dice1src);
+document.querySelector(".img2").setAttribute("src",dice2src);
